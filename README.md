@@ -7,7 +7,7 @@
 
 # Material Dynamic Colors
 
-This project is a port of https://material-foundation.github.io/material-theme-builder
+This project is based on https://material-foundation.github.io/material-theme-builder
 
 ## Getting Started
 
