@@ -1,10 +1,9 @@
 <p align="center">
-    <a href="https://github.com/leonardorafael/material-dynamic-colors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/material-dynamic-colors/material-dynamic-colors" alt="License"></a>
-    <img src="https://img.shields.io/jsdelivr/npm/hy/material-dynamic-colors" alt="Downloads">
+    <a href="https://github.com/leonardorafael/material-dynamic-colors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/leonardorafael/material-dynamic-colors" alt="License"></a>
     <a href="https://bundlephobia.com/package/material-dynamic-colors"><img src="https://badgen.net/bundlephobia/minzip/material-dynamic-colors" alt="Size"></a>
     <a href="https://www.npmjs.com/package/material-dynamic-colors"><img src="https://img.shields.io/npm/v/material-dynamic-colors" alt="Version"></a>
-    <a href="https://github.com/leonardorafael/material-dynamic-colors/pulls"><img src="https://img.shields.io/github/issues-pr/material-dynamic-colors/material-dynamic-colors" alt="Pull Request"></a>
-    <a href="https://github.com/leonardorafael/material-dynamic-colors/issues"><img src="https://img.shields.io/github/issues/material-dynamic-colors/material-dynamic-colors" alt="Issues"></a>
+    <a href="https://github.com/leonardorafael/material-dynamic-colors/pulls"><img src="https://img.shields.io/github/issues-pr/leonardorafael/material-dynamic-colors" alt="Pull Request"></a>
+    <a href="https://github.com/leonardorafael/material-dynamic-colors/issues"><img src="https://img.shields.io/github/issues/leonardorafael/material-dynamic-colors" alt="Issues"></a>
 </p>
 
 # Material Dynamic Colors
@@ -52,4 +51,4 @@ let colors = await materialDynamicColors(blob);
 [MIT](https://opensource.org/licenses/MIT)
 
 ## Hello!
-[![Stargazers repo roster for @material-dynamic-colors/material-dynamic-colors](https://reporoster.com/stars/notext/material-dynamic-colors/material-dynamic-colors)](https://github.com/leonardorafael/material-dynamic-colors/stargazers)
+[![Stargazers repo roster for @leonardorafael/material-dynamic-colors](https://reporoster.com/stars/notext/leonardorafael/material-dynamic-colors)](https://github.com/leonardorafael/material-dynamic-colors/stargazers)
