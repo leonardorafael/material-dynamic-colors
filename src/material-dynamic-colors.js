@@ -628,14 +628,18 @@
     var is3p = __flags.is3p;
     console.debug("theme adapter from color");
     const keyTones = new __CorePalette(__intFromHex(value));
-    return new __ThemeAdapter({
+    const theme = new __ThemeAdapter({
       tones: keyTones,
       seed: value,
       is3p,
       overrides: {},
       blend: !1,
       isBaseline: !1
-    })
+    });
+    return {
+      light: theme.light,
+      dark: theme.dark
+    }
   };
 
   const __hexFromInt = argb => {

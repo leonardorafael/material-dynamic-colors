@@ -1,6 +1,5 @@
 <p align="center">
     <a href="https://github.com/leonardorafael/material-dynamic-colors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/leonardorafael/material-dynamic-colors" alt="License"></a>
-    <a href="https://bundlephobia.com/package/material-dynamic-colors"><img src="https://badgen.net/bundlephobia/minzip/material-dynamic-colors" alt="Size"></a>
     <a href="https://www.npmjs.com/package/material-dynamic-colors"><img src="https://img.shields.io/npm/v/material-dynamic-colors" alt="Version"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/pulls"><img src="https://img.shields.io/github/issues-pr/leonardorafael/material-dynamic-colors" alt="Pull Request"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/issues"><img src="https://img.shields.io/github/issues/leonardorafael/material-dynamic-colors" alt="Issues"></a>
@@ -46,9 +45,71 @@ let fromBlob = new Blob();
 let colors = await materialDynamicColors(blob);
 ```
 
+## Returned object
+```js
+{
+   light:{
+      primary:"#715d00",
+      onPrimary:"#ffffff",
+      primaryContainer:"#ffe15e",
+      onPrimaryContainer:"#231b00",
+      secondary:"#675e40",
+      onSecondary:"#ffffff",
+      secondaryContainer:"#efe2bb",
+      onSecondaryContainer:"#211b04",
+      tertiary:"#44664d",
+      onTertiary:"#ffffff",
+      tertiaryContainer:"#c6eccd",
+      onTertiaryContainer:"#00210e",
+      error:"#ba1b1b",
+      errorContainer:"#ffdad4",
+      onError:"#ffffff",
+      onErrorContainer:"#410001",
+      background:"#fffbf7",
+      onBackground:"#1d1b16",
+      surface:"#fffbf7",
+      onSurface:"#1d1b16",
+      surfaceVariant:"#eae2cf",
+      onSurfaceVariant:"#4b4639",
+      outline:"#7c7767",
+      inverseOnSurface:"#f6f0e6",
+      inverseSurface:"#32302a"
+   },
+   dark:{
+      primary:"#eac400",
+      onPrimary:"#3a3000",
+      primaryContainer:"#554600",
+      onPrimaryContainer:"#ffe15e",
+      secondary:"#d2c6a1",
+      onSecondary:"#373016",
+      secondaryContainer:"#4e462a",
+      onSecondaryContainer:"#efe2bb",
+      tertiary:"#aad0b2",
+      onTertiary:"#163722",
+      tertiaryContainer:"#2c4e37",
+      onTertiaryContainer:"#c6eccd",
+      error:"#ffb4a9",
+      errorContainer:"#930006",
+      onError:"#680003",
+      onErrorContainer:"#ffdad4",
+      background:"#1d1b16",
+      onBackground:"#e8e2d9",
+      surface:"#1d1b16",
+      onSurface:"#e8e2d9",
+      surfaceVariant:"#4b4639",
+      onSurfaceVariant:"#cec6b4",
+      outline:"#969080",
+      inverseOnSurface:"#1d1b16",
+      inverseSurface:"#e8e2d9"
+   }
+}
+```
+
+
+
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-## Hello!
+## Thank you!
 [![Stargazers repo roster for @leonardorafael/material-dynamic-colors](https://reporoster.com/stars/notext/leonardorafael/material-dynamic-colors)](https://github.com/leonardorafael/material-dynamic-colors/stargazers)
