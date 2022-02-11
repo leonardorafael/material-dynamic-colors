@@ -628,7 +628,7 @@
     var is3p = __flags.is3p;
     console.debug("theme adapter from color");
     const keyTones = new __CorePalette(__intFromHex(value));
-    const theme = new __ThemeAdapter({
+    return new __ThemeAdapter({
       tones: keyTones,
       seed: value,
       is3p,
@@ -636,10 +636,6 @@
       blend: !1,
       isBaseline: !1
     });
-    return {
-      light: theme.light,
-      dark: theme.dark
-    }
   };
 
   const __hexFromInt = argb => {
@@ -1204,20 +1200,33 @@
     return __hexFromInt(ranked[0])
   };
 
-  const __materialDynamicColors = async function (param) {
-      if (/\#[a-fA-F0-9]{6}/.test(param))
-      return __fromColor(param);
+  const __materialDynamicColors = async function (from) {
+    if (/\#[a-fA-F0-9]{6}/.test(from))
+      return __fromColor(from);
 
-    let image = param;
+    let image = null;
     
-    if (param instanceof Blob || param instanceof File)
-      image = URL.createObjectURL(param);
+    if (from instanceof Blob || from instanceof File)
+      image = URL.createObjectURL(from);
 
-    if (param.target && param.target.files[0])
-      image = URL.createObjectURL(param.target.files[0]);
+    if (from.target && from.target.files[0])
+      image = URL.createObjectURL(from.target.files[0]);
+
+    if (from.files && from.files[0])
+      image = URL.createObjectURL(from.files[0]);
+
+    if (!image) 
+      return {
+        light: null,
+        dark: null
+      };
 
     let color = await __index_seedFromImage(image);
-    return __fromColor(color);
+    let theme = __fromColor(color);
+    return {
+      light: theme.light,
+      dark: theme.dark
+    };
   };
 
   window.materialDynamicColors = __materialDynamicColors;
