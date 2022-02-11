@@ -2,12 +2,12 @@
   "author": "Leonardo Rafal Wehrmeister",
   "description": "This project is a port of https://material-foundation.github.io/material-theme-builder",
   "homepage": "https://github.com/leonardorafael/material-dynamic-colors",
-  "version": "0.0.5",
+  "version": "0.0.6",
   "name": "material-dynamic-colors",
   "license": "MIT",
   "scripts": {
     "clean": "node build/clean.js",
-    "build": "babel src -d dist --out-file-extension .min.js && terser dist/material-dynamic-colors.min.js -o dist/material-dynamic-colors.min.js"
+    "build": "babel src -d dist --out-file-extension .min.js && terser dist/material-dynamic-colors.min.js --compress --mangle --output dist/material-dynamic-colors.min.js"
   },
   "dependencies": {},
   "devDependencies": {
