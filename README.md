@@ -14,7 +14,7 @@ This project is based on https://material-foundation.github.io/material-theme-bu
 ### CDN
 
 ```html
-<script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.8/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+<script src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.0.9/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
 ```
 
 ### NPM
@@ -35,6 +35,12 @@ let colors = await materialDynamicColors(source);
 
 // from color
 let colors = await materialDynamicColors("#ffd700");
+
+// from path
+let colors = await materialDynamicColors("/image.png");
+
+// from url (caution with cors errors)
+let colors = await materialDynamicColors("http://domain.com/image.png");
 
 // from file
 let fromFile = document.query("input[type='file']").files[0];
