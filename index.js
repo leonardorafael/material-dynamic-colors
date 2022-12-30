@@ -1,1 +1,1 @@
-import "material-dynamic-colors/dist/npm/material-dynamic-colors.min.js";                                                                                                                                                                 
+import "material-dynamic-colors/dist/cdn/material-dynamic-colors.js";                                                                                                                                                                 
