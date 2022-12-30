@@ -2,7 +2,7 @@
   "author": "Leonardo Rafal Wehrmeister",
   "description": "This project is based on https://material-foundation.github.io/material-theme-builder",
   "homepage": "https://github.com/leonardorafael/material-dynamic-colors",
-  "version": "0.0.11",
+  "version": "0.0.12",
   "name": "material-dynamic-colors",
   "license": "MIT",
   "type": "module",
