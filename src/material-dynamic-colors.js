@@ -1,4 +1,6 @@
 (() => {
+  const _window = typeof window !== 'undefined' ? window : {};
+
   var BASELINE_1P = {
     light: {
         background: "#FFFFFF",
@@ -1778,5 +1780,6 @@
     };
   };
 
-  window.materialDynamicColors = materialDynamicColors;
+  _window.materialDynamicColors = materialDynamicColors;
+  return _window.materialDynamicColors;
 })();

@@ -2,14 +2,13 @@
   "author": "Leonardo Rafal Wehrmeister",
   "description": "This project is based on https://material-foundation.github.io/material-theme-builder",
   "homepage": "https://github.com/leonardorafael/material-dynamic-colors",
-  "version": "0.0.10",
+  "version": "0.0.11",
   "name": "material-dynamic-colors",
   "license": "MIT",
   "type": "module",
   "scripts": {
     "cdn": "node ./build/cdn.js",
-    "npm": "node ./build/npm.js",
-    "build": "npm run cdn && npm run npm"
+    "build": "npm run cdn"
   },
   "devDependencies": {
     "terser": "^5.10.0"
