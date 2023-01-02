@@ -1,2 +1,2 @@
-import materialDynamicColors from "material-dynamic-colors/dist/cdn/material-dynamic-colors.js";
+import materialDynamicColors from "./dist/cdn/material-dynamic-colors";
 export default materialDynamicColors;
