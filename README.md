@@ -14,7 +14,7 @@ This project is based on https://material-foundation.github.io/material-theme-bu
 ### CDN
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.3/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.4/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
 ```
 
 ### NPM
