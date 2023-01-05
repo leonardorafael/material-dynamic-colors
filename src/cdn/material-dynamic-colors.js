@@ -1,5 +1,5 @@
 export default (() => {
-  const _window = typeof window !== 'undefined' ? window : {};
+  const _window = globalThis;
 
   var BASELINE_1P = {
     light: {
