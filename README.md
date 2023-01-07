@@ -1,5 +1,6 @@
 <p align="center">
     <a href="https://github.com/leonardorafael/material-dynamic-colors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/leonardorafael/material-dynamic-colors" alt="License"></a>
+    <a href="https://img.badgesize.io/leonardorafael/material-dynamic-colors/main/dist/cdn/material-dynamic-colors.min.js?compression=brotli"><img src="https://img.badgesize.io/leonardorafael/material-dynamic-colors/main/dist/cdn/material-dynamic-colors.min.js?compression=brotli" alt="Size"></a>
     <a href="https://www.npmjs.com/package/material-dynamic-colors"><img src="https://img.shields.io/npm/v/material-dynamic-colors" alt="Version"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/pulls"><img src="https://img.shields.io/github/issues-pr/leonardorafael/material-dynamic-colors" alt="Pull Request"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/issues"><img src="https://img.shields.io/github/issues/leonardorafael/material-dynamic-colors" alt="Issues"></a>
@@ -14,7 +15,7 @@ This project is based on https://material-foundation.github.io/material-theme-bu
 ### CDN
 
 ```html
-<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.4/dist/cdn/material-dynamic-colors.min.js" type="text/javascript"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.4/dist/cdn/material-dynamic-colors.min.js"></script>
 ```
 
 ### NPM
