@@ -28,7 +28,9 @@ npm i material-dynamic-colors
 ```js
 // importing as window.materialDynamicColors
 import "material-dynamic-colors";
+```
 
+```js
 // importing as materialDynamicColors
 import materialDynamicColors from "material-dynamic-colors";
 ```
