@@ -1,4 +1,4 @@
-interface IMode {  
+interface IThemeColor {  
   primary: string,
   onPrimary: string,
   primaryContainer: string,
@@ -29,8 +29,8 @@ interface IMode {
 }
 
 interface ITheme {
-  light: IMode,
-  dark: IMode
+  light: IThemeColor,
+  dark: IThemeColor
 }
 
 declare module "material-dynamic-colors";
