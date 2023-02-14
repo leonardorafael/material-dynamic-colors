@@ -1,4 +1,4 @@
-interface IThemeColor {  
+interface IMaterialDynamicColorsThemeColor {  
   primary: string,
   onPrimary: string,
   primaryContainer: string,
@@ -28,10 +28,10 @@ interface IThemeColor {
   shadow: string
 }
 
-interface ITheme {
-  light: IThemeColor,
-  dark: IThemeColor
+interface IMaterialDynamicColorsTheme {
+  light: IMaterialDynamicColorsThemeColor,
+  dark: IMaterialDynamicColorsThemeColor
 }
 
 declare module "material-dynamic-colors";
-declare function materialDynamicColors(from: string | File | Blob | Event): Promise<ITheme>;
+declare function materialDynamicColors(from: string | File | Blob | Event): Promise<IMaterialDynamicColorsTheme>;
