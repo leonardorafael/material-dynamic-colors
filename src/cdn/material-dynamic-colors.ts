@@ -11,31 +11,39 @@ function themeToJson(theme: Theme) {
   return json;
 }
 
-async function materialDynamicColors (from: string | File | Blob | Event | HTMLImageElement): Promise<IMaterialDynamicColorsTheme | undefined> {
+async function materialDynamicColors (from: string | File | Blob | Event | HTMLImageElement): Promise<IMaterialDynamicColorsTheme> {
   const to:any = from;
-
-  if (typeof to === "string" && /^\#[0-9a-f]+$/i.test(to)) {
-    let theme = themeFromSourceColor(argbFromHex(to));
-    return themeToJson(theme);
+  const emptyTheme = <IMaterialDynamicColorsTheme>{
+    light:{},
+    dark:{}
   }
 
-  if (to.src) {
-    let theme = await themeFromImage(to);
-    return themeToJson(theme);
-  }
-
-  let blob = new Blob();
-  if (typeof to === "string") blob = await fetch(to).then(response => response.blob());
-  if (to.size) blob = to;
-  if (to.files && to.files[0]) blob = to.files[0];
-  if (to.target && to.target.files && to.target.files[0]) blob = to.target.files[0];
-  if (!blob.size) return;
-
-  let image = new Image(64);
-  image.src = URL.createObjectURL(blob);
+  try {
+    if (typeof to === "string" && /^\#[0-9a-f]+$/i.test(to)) {
+      let theme = themeFromSourceColor(argbFromHex(to));
+      return themeToJson(theme);
+    }
   
-  let theme = await themeFromImage(image);
-  return themeToJson(theme);
+    if (to.src) {
+      let theme = await themeFromImage(to);
+      return themeToJson(theme);
+    }
+
+    let blob = new Blob();
+    if (typeof to === "string") blob = await fetch(to).then(response => response.blob());
+    if (to.size) blob = to;
+    if (to.files && to.files[0]) blob = to.files[0];
+    if (to.target && to.target.files && to.target.files[0]) blob = to.target.files[0];
+    if (!blob.size) return emptyTheme;
+  
+    let image = new Image(64);
+    image.src = URL.createObjectURL(blob);
+    
+    let theme = await themeFromImage(image);
+    return themeToJson(theme);
+  } catch(error) {
+    return emptyTheme;
+  }
 }
 
 (globalThis as any).materialDynamicColors = materialDynamicColors;

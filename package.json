@@ -14,7 +14,6 @@
     "@material/material-color-utilities": "^0.2.7"
   },
   "devDependencies": {
-    "jasmine": "^5.0.2",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
     "vitest": "^0.32.4"
