@@ -16,12 +16,12 @@ This project is based on https://material-foundation.github.io/material-theme-bu
 
 ```html
 // with html
-<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js"></script>
+<script type="module" src="https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.0.0/dist/cdn/material-dynamic-colors.min.js"></script>
 ```
 
 ```js
 // with javascript
-import "https://cdn.jsdelivr.net/npm/material-dynamic-colors@0.1.7/dist/cdn/material-dynamic-colors.min.js";
+import "https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.0.0/dist/cdn/material-dynamic-colors.min.js";
 ```
 
 ### NPM
@@ -67,58 +67,66 @@ let colors = await materialDynamicColors(blob);
 ```js
 {
    light:{
-      primary:"#715d00",
-      onPrimary:"#ffffff",
-      primaryContainer:"#ffe15e",
-      onPrimaryContainer:"#231b00",
-      secondary:"#675e40",
-      onSecondary:"#ffffff",
-      secondaryContainer:"#efe2bb",
-      onSecondaryContainer:"#211b04",
-      tertiary:"#44664d",
-      onTertiary:"#ffffff",
-      tertiaryContainer:"#c6eccd",
-      onTertiaryContainer:"#00210e",
-      error:"#ba1b1b",
-      errorContainer:"#ffdad4",
-      onError:"#ffffff",
-      onErrorContainer:"#410001",
-      background:"#fffbf7",
-      onBackground:"#1d1b16",
-      surface:"#fffbf7",
-      onSurface:"#1d1b16",
-      surfaceVariant:"#eae2cf",
-      onSurfaceVariant:"#4b4639",
-      outline:"#7c7767",
-      inverseOnSurface:"#f6f0e6",
-      inverseSurface:"#32302a"
+      primary: string,
+      onPrimary: string,
+      primaryContainer: string,
+      onPrimaryContainer: string,
+      secondary: string,
+      onSecondary: string,
+      secondaryContainer: string,
+      onSecondaryContainer: string,
+      tertiary: string,
+      onTertiary: string,
+      tertiaryContainer: string,
+      onTertiaryContainer: string,
+      error: string,
+      onError: string,
+      errorContainer: string,
+      onErrorContainer: string,
+      background: string,
+      onBackground: string,
+      surface: string,
+      onSurface: string,
+      surfaceVariant: string,
+      onSurfaceVariant: string,
+      outline: string,
+      outlineVariant: string,
+      shadow: string,
+      scrim: string,
+      inverseSurface: string,
+      inverseOnSurface: string,
+      inversePrimary: string
    },
    dark:{
-      primary:"#eac400",
-      onPrimary:"#3a3000",
-      primaryContainer:"#554600",
-      onPrimaryContainer:"#ffe15e",
-      secondary:"#d2c6a1",
-      onSecondary:"#373016",
-      secondaryContainer:"#4e462a",
-      onSecondaryContainer:"#efe2bb",
-      tertiary:"#aad0b2",
-      onTertiary:"#163722",
-      tertiaryContainer:"#2c4e37",
-      onTertiaryContainer:"#c6eccd",
-      error:"#ffb4a9",
-      errorContainer:"#930006",
-      onError:"#680003",
-      onErrorContainer:"#ffdad4",
-      background:"#1d1b16",
-      onBackground:"#e8e2d9",
-      surface:"#1d1b16",
-      onSurface:"#e8e2d9",
-      surfaceVariant:"#4b4639",
-      onSurfaceVariant:"#cec6b4",
-      outline:"#969080",
-      inverseOnSurface:"#1d1b16",
-      inverseSurface:"#e8e2d9"
+      primary: string,
+      onPrimary: string,
+      primaryContainer: string,
+      onPrimaryContainer: string,
+      secondary: string,
+      onSecondary: string,
+      secondaryContainer: string,
+      onSecondaryContainer: string,
+      tertiary: string,
+      onTertiary: string,
+      tertiaryContainer: string,
+      onTertiaryContainer: string,
+      error: string,
+      onError: string,
+      errorContainer: string,
+      onErrorContainer: string,
+      background: string,
+      onBackground: string,
+      surface: string,
+      onSurface: string,
+      surfaceVariant: string,
+      onSurfaceVariant: string,
+      outline: string,
+      outlineVariant: string,
+      shadow: string,
+      scrim: string,
+      inverseSurface: string,
+      inverseOnSurface: string,
+      inversePrimary: string
    }
 }
 ```
