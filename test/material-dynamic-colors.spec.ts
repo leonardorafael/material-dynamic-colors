@@ -20,13 +20,13 @@ it("adding surface container colors", async () => {
   expect(json.dark.surfaceContainerLowest).not.toBeUndefined();
   expect(json.dark.surfaceContainerLow).not.toBeUndefined();
   expect(json.dark.surfaceContainer).not.toBeUndefined();
-  expect(json.dark.surfaceContainerHight).not.toBeUndefined();
+  expect(json.dark.surfaceContainerHigh).not.toBeUndefined();
   expect(json.dark.surfaceContainerHighest).not.toBeUndefined();
   expect(json.light.surfaceDim).not.toBeUndefined();
   expect(json.light.surfaceBright).not.toBeUndefined();
   expect(json.light.surfaceContainerLowest).not.toBeUndefined();
   expect(json.light.surfaceContainerLow).not.toBeUndefined();
   expect(json.light.surfaceContainer).not.toBeUndefined();
-  expect(json.light.surfaceContainerHight).not.toBeUndefined();
+  expect(json.light.surfaceContainerHigh).not.toBeUndefined();
   expect(json.light.surfaceContainerHighest).not.toBeUndefined();
 });

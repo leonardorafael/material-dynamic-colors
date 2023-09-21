@@ -33,7 +33,7 @@ export interface IMaterialDynamicColorsThemeColor {
   surfaceContainerLowest: string,
   surfaceContainerLow: string,
   surfaceContainer: string,
-  surfaceContainerHight: string,
+  surfaceContainerHigh: string,
   surfaceContainerHighest: string
 }
 

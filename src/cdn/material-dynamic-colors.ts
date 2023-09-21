@@ -13,14 +13,14 @@ function themeToJson(theme: Theme) {
   json.dark.surfaceContainerLowest = hexFromArgb(theme.palettes.neutral.tone(4));
   json.dark.surfaceContainerLow = hexFromArgb(theme.palettes.neutral.tone(10));
   json.dark.surfaceContainer = hexFromArgb(theme.palettes.neutral.tone(12));
-  json.dark.surfaceContainerHight = hexFromArgb(theme.palettes.neutral.tone(17));
+  json.dark.surfaceContainerHigh = hexFromArgb(theme.palettes.neutral.tone(17));
   json.dark.surfaceContainerHighest = hexFromArgb(theme.palettes.neutral.tone(22));
   json.light.surfaceDim = hexFromArgb(theme.palettes.neutral.tone(87));
   json.light.surfaceBright = hexFromArgb(theme.palettes.neutral.tone(98));
   json.light.surfaceContainerLowest = hexFromArgb(theme.palettes.neutral.tone(100));
   json.light.surfaceContainerLow = hexFromArgb(theme.palettes.neutral.tone(96));
   json.light.surfaceContainer = hexFromArgb(theme.palettes.neutral.tone(94));
-  json.light.surfaceContainerHight = hexFromArgb(theme.palettes.neutral.tone(92));
+  json.light.surfaceContainerHigh = hexFromArgb(theme.palettes.neutral.tone(92));
   json.light.surfaceContainerHighest = hexFromArgb(theme.palettes.neutral.tone(90));
 
   return json;
