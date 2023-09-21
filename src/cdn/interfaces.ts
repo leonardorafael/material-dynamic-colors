@@ -27,7 +27,14 @@ export interface IMaterialDynamicColorsThemeColor {
   scrim: string,
   inverseSurface: string,
   inverseOnSurface: string,
-  inversePrimary: string
+  inversePrimary: string,
+  surfaceDim: string,
+  surfaceBright: string,
+  surfaceContainerLowest: string,
+  surfaceContainerLow: string,
+  surfaceContainer: string,
+  surfaceContainerHight: string,
+  surfaceContainerHighest: string
 }
 
 export interface IMaterialDynamicColorsTheme {

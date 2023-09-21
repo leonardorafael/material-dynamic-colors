@@ -12,3 +12,21 @@ it("getting empty theme from invalid", async () => {
   expect(json.light.primary).toBeUndefined();
   expect(json.dark.primary).toBeUndefined();
 });
+
+it("adding surface container colors", async () => {
+  const json = await materialDynamicColors("#ffd700");
+  expect(json.dark.surfaceDim).not.toBeUndefined();
+  expect(json.dark.surfaceBright).not.toBeUndefined();
+  expect(json.dark.surfaceContainerLowest).not.toBeUndefined();
+  expect(json.dark.surfaceContainerLow).not.toBeUndefined();
+  expect(json.dark.surfaceContainer).not.toBeUndefined();
+  expect(json.dark.surfaceContainerHight).not.toBeUndefined();
+  expect(json.dark.surfaceContainerHighest).not.toBeUndefined();
+  expect(json.light.surfaceDim).not.toBeUndefined();
+  expect(json.light.surfaceBright).not.toBeUndefined();
+  expect(json.light.surfaceContainerLowest).not.toBeUndefined();
+  expect(json.light.surfaceContainerLow).not.toBeUndefined();
+  expect(json.light.surfaceContainer).not.toBeUndefined();
+  expect(json.light.surfaceContainerHight).not.toBeUndefined();
+  expect(json.light.surfaceContainerHighest).not.toBeUndefined();
+});
