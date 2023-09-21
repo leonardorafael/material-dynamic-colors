@@ -1,4 +1,4 @@
-export interface IMaterialDynamicColorsThemeColor {  
+export interface IMaterialDynamicColorsThemeColor {
   primary: string,
   onPrimary: string,
   primaryContainer: string,
