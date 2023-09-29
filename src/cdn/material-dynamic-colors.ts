@@ -8,6 +8,8 @@ function themeToJson(theme: Theme) {
     for (let j in json[i])
       json[i][j] = hexFromArgb(json[i][j]);
 
+  json.dark.surface = hexFromArgb(theme.palettes.neutral.tone(6));
+  json.dark.onSurface = hexFromArgb(theme.palettes.neutral.tone(90));
   json.dark.surfaceDim = hexFromArgb(theme.palettes.neutral.tone(6));
   json.dark.surfaceBright = hexFromArgb(theme.palettes.neutral.tone(24));
   json.dark.surfaceContainerLowest = hexFromArgb(theme.palettes.neutral.tone(4));
@@ -15,6 +17,8 @@ function themeToJson(theme: Theme) {
   json.dark.surfaceContainer = hexFromArgb(theme.palettes.neutral.tone(12));
   json.dark.surfaceContainerHigh = hexFromArgb(theme.palettes.neutral.tone(17));
   json.dark.surfaceContainerHighest = hexFromArgb(theme.palettes.neutral.tone(22));
+  json.light.surface = hexFromArgb(theme.palettes.neutral.tone(98));
+  json.light.onSurface = hexFromArgb(theme.palettes.neutral.tone(10));
   json.light.surfaceDim = hexFromArgb(theme.palettes.neutral.tone(87));
   json.light.surfaceBright = hexFromArgb(theme.palettes.neutral.tone(98));
   json.light.surfaceContainerLowest = hexFromArgb(theme.palettes.neutral.tone(100));
