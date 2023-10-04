@@ -150,7 +150,7 @@ let colors = await materialDynamicColors(blob);
 
 ### CLI
 
-Do not forget to put your source color between quotes:
+Do not forget to put your color source between quotes:
 ```bash
 material-dynamic-colors "#FF0000"
 ```
