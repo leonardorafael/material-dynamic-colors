@@ -26,8 +26,8 @@ import "https://cdn.jsdelivr.net/npm/material-dynamic-colors@1.0.5/dist/cdn/mate
 
 ### NPM
 
-```js
-// installing
+```bash
+# installing
 npm i material-dynamic-colors
 ```
 
@@ -42,6 +42,9 @@ import materialDynamicColors from "material-dynamic-colors";
 ```
 
 ## How to use it?
+
+### JS
+
 ```js
 let colors = await materialDynamicColors(source);
 
@@ -63,7 +66,7 @@ let fromBlob = new Blob();
 let colors = await materialDynamicColors(blob);
 ```
 
-## Returned object
+#### Returned object
 ```js
 {
    light:{
@@ -145,7 +148,94 @@ let colors = await materialDynamicColors(blob);
 }
 ```
 
+### CLI
 
+Do not forget to put your source color between quotes:
+```bash
+material-dynamic-colors "#FF0000"
+```
+#### Output
+
+```text
+
+Generating colors from #FF0000
+
+light theme:
+        --primary: #C00100;
+        --on-primary: #FFFFFF;
+        --primary-container: #FFDAD4;
+        --on-primarycontainer: #410000;
+        --secondary: #775651;
+        --on-secondary: #FFFFFF;
+        --secondary-container: #FFDAD4;
+        --on-secondarycontainer: #2C1512;
+        --tertiary: #705C2E;
+        --on-tertiary: #FFFFFF;
+        --tertiary-container: #FBDFA6;
+        --on-tertiarycontainer: #251A00;
+        --error: #BA1A1A;
+        --on-error: #FFFFFF;
+        --error-container: #FFDAD6;
+        --on-errorcontainer: #410002;
+        --background: #FFFBFF;
+        --on-background: #201A19;
+        --surface: #FFF8F6;
+        --on-surface: #201A19;
+        --surface-variant: #F5DDDA;
+        --on-surfacevariant: #534341;
+        --outline: #857370;
+        --outline-variant: #D8C2BE;
+        --shadow: #000000;
+        --scrim: #000000;
+        --inverse-surface: #362F2E;
+        --inverse-onsurface: #FBEEEC;
+        --inverse-primary: #FFB4A8;
+        --surface-dim: #E4D7D5;
+        --surface-bright: #FFF8F6;
+        --surface-containerlowest: #FFFFFF;
+        --surface-containerlow: #FEF1EE;
+        --surface-container: #F8EBE9;
+        --surface-containerhigh: #F3E5E3;
+        --surface-containerhighest: #EDE0DD;
+
+dark theme:
+        --primary: #FFB4A8;
+        --on-primary: #690100;
+        --primary-container: #930100;
+        --on-primarycontainer: #FFDAD4;
+        --secondary: #E7BDB6;
+        --on-secondary: #442925;
+        --secondary-container: #5D3F3B;
+        --on-secondarycontainer: #FFDAD4;
+        --tertiary: #DEC48C;
+        --on-tertiary: #3E2E04;
+        --tertiary-container: #564419;
+        --on-tertiarycontainer: #FBDFA6;
+        --error: #FFB4AB;
+        --on-error: #690005;
+        --error-container: #93000A;
+        --on-errorcontainer: #FFB4AB;
+        --background: #201A19;
+        --on-background: #EDE0DD;
+        --surface: #181211;
+        --on-surface: #EDE0DD;
+        --surface-variant: #534341;
+        --on-surfacevariant: #D8C2BE;
+        --outline: #A08C89;
+        --outline-variant: #534341;
+        --shadow: #000000;
+        --scrim: #000000;
+        --inverse-surface: #EDE0DD;
+        --inverse-onsurface: #362F2E;
+        --inverse-primary: #C00100;
+        --surface-dim: #181211;
+        --surface-bright: #3F3736;
+        --surface-containerlowest: #120D0C;
+        --surface-containerlow: #201A19;
+        --surface-container: #251E1D;
+        --surface-containerhigh: #2F2827;
+        --surface-containerhighest: #3B3332;
+```
 
 ## License
 
