@@ -234,7 +234,8 @@ dark theme:
         --surface-container-low: #201A19;
         --surface-container: #251E1D;
         --surface-container-high: #2F2827;
-        --surface-container-highest: #3B3332;```
+        --surface-container-highest: #3B3332;
+```
 
 ## License
 
