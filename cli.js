@@ -15,7 +15,7 @@ const colors =
 Object.entries(colors).forEach(([themeName, themeColors]) => {
     console.log(`\n${themeName} theme:`)
     Object.entries(themeColors).forEach(([camelName, color]) => {
-        const kebabName = camelName.replace(/([a-z])([A-Z])/, "$1-$2").toLowerCase()
+        const kebabName = camelName.replace(/([a-z])([A-Z])/g, "$1-$2").toLowerCase()
         console.log(`\t--${kebabName}: ${color.toUpperCase()};`)
     })
 })
