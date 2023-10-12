@@ -9,7 +9,7 @@ let [,, source, format='JSON'] = process.argv
 format = format.toUpperCase()
 
 if (!FORMATS.includes(format)) {
-    console.error(`Format must be one of: "${FORMATS.join('", "')}"`)
+    console.error(`Format must be one of: ${FORMATS.join(", ")}`)
     process.exit(1)
 }
 console.log(`\nGenerating ${format} colors from ${source}...`)
