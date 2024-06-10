@@ -21,7 +21,7 @@ import fs from "fs";
 
   try {
     const jsContent = fs.readFileSync("./dist/cdn/material-dynamic-colors.min.js", "utf-8");
-    fs.writeFileSync("./dist/cdn/material-dynamic-colors.min.js", "export default (() => {\n"+jsContent+ "return globalThis.materialDynamicColors;\n})();");
+    fs.writeFileSync("./dist/cdn/material-dynamic-colors.min.js", jsContent + "\nexport default globalThis.materialDynamicColors;");
   } catch (error) {
     console.error(error);
   }
