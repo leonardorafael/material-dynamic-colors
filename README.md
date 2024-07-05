@@ -1,6 +1,6 @@
 <p align="center">
     <a href="https://github.com/leonardorafael/material-dynamic-colors/blob/main/LICENSE"><img src="https://img.shields.io/github/license/leonardorafael/material-dynamic-colors" alt="License"></a>
-    <a href="https://img.badgesize.io/leonardorafael/material-dynamic-colors/main/dist/cdn/material-dynamic-colors.min.js?compression=brotli"><img src="https://img.badgesize.io/leonardorafael/material-dynamic-colors/main/dist/cdn/material-dynamic-colors.min.js?compression=brotli" alt="Size"></a>
+    <a href="https://bundlephobia.com/package/material-dynamic-colors" target="_blank"><img src="https://img.shields.io/bundlephobia/minzip/material-dynamic-colors" alt="minzipped size"></a>
     <a href="https://www.npmjs.com/package/material-dynamic-colors"><img src="https://img.shields.io/npm/v/material-dynamic-colors" alt="Version"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/pulls"><img src="https://img.shields.io/github/issues-pr/leonardorafael/material-dynamic-colors" alt="Pull Request"></a>
     <a href="https://github.com/leonardorafael/material-dynamic-colors/issues"><img src="https://img.shields.io/github/issues/leonardorafael/material-dynamic-colors" alt="Issues"></a>
