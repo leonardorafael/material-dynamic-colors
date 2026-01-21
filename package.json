@@ -2,7 +2,7 @@
   "author": "Leonardo Rafal Wehrmeister",
   "description": "This project is based on https://material-foundation.github.io/material-theme-builder and uses official color utilities from Material Design.",
   "homepage": "https://github.com/leonardorafael/material-dynamic-colors",
-  "version": "1.1.2",
+  "version": "1.1.3",
   "name": "material-dynamic-colors",
   "license": "MIT",
   "type": "module",
@@ -11,7 +11,7 @@
     "test": "vitest run --root=./test"
   },
   "dependencies": {
-    "@material/material-color-utilities": "^0.2.7"
+    "@material/material-color-utilities": "^0.3.0"
   },
   "devDependencies": {
     "typescript": "^5.0.2",

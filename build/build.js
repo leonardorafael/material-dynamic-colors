@@ -3,8 +3,12 @@ import fs from "fs";
 
 (async () => {
   await build({
+    esbuild: {
+      legalComments: 'none'
+    },
     build: {
       outDir: "./dist/cdn",
+      assetsInlineLimit: 0,
       rollupOptions: {
         input: {
           "material-dynamic-colors.min": "./src/build.ts",
