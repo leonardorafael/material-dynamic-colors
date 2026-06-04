@@ -37,7 +37,7 @@ function themeToJson(theme: Theme) {
   return json;
 }
 
-async function materialDynamicColors (from: string | File | Blob | Event | HTMLImageElement): Promise<IMaterialDynamicColorsTheme> {
+export async function updateTheme (from: string | File | Blob | Event | HTMLImageElement): Promise<IMaterialDynamicColorsTheme> {
   const to:any = from;
   const emptyTheme = <IMaterialDynamicColorsTheme>{
     light:{},
@@ -72,5 +72,5 @@ async function materialDynamicColors (from: string | File | Blob | Event | HTMLI
   }
 }
 
-(globalThis as any).materialDynamicColors = materialDynamicColors;
+(globalThis as any).materialDynamicColors = updateTheme;
 export default (globalThis as any).materialDynamicColors;

@@ -1,22 +1,22 @@
 import { it, expect } from "vitest";
-import materialDynamicColors from "../src/cdn/material-dynamic-colors";
-import { themeFromSourceColor, themeFromImage, argbFromHex, hexFromArgb, Theme } from "@material/material-color-utilities";
+import { updateTheme } from "../src/cdn/material-dynamic-colors";
+import { themeFromSourceColor, argbFromHex, hexFromArgb } from "@material/material-color-utilities";
 
 it("getting theme from color", async () => {
-  const json = await materialDynamicColors("#ffd700");
+  const json = await updateTheme("#ffd700");
   expect(json.light.primary).not.toBeUndefined();
   expect(json.dark.primary).not.toBeUndefined();
 });
 
 it("getting empty theme from invalid", async () => {
-  const json = await materialDynamicColors("invalid");
+  const json = await updateTheme("invalid");
   expect(json.light.primary).toBeUndefined();
   expect(json.dark.primary).toBeUndefined();
 });
 
 it("adding surface container colors", async () => {
   const theme = themeFromSourceColor(argbFromHex("#ffd700"));
-  const json = await materialDynamicColors("#ffd700");
+  const json = await updateTheme("#ffd700");
 
   expect(json.dark.surfaceDim).toBe(hexFromArgb(theme.palettes.neutral.tone(6)));
   expect(json.dark.surface).toBe(hexFromArgb(theme.palettes.neutral.tone(6)));

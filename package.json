@@ -8,15 +8,17 @@
   "type": "module",
   "scripts": {
     "build": "node ./build/build.js",
-    "test": "vitest run --root=./test"
+    "test": "vitest run"
   },
   "dependencies": {
     "@material/material-color-utilities": "^0.3.0"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.1.8",
+    "jsdom": "^29.1.1",
     "typescript": "^5.0.2",
     "vite": "^4.3.9",
-    "vitest": "^0.32.4"
+    "vitest": "^4.1.8"
   },
   "files": [
     "dist/cdn",
