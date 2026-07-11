@@ -66,6 +66,23 @@ let fromBlob = new Blob();
 let colors = await materialDynamicColors(blob);
 ```
 
+#### Multiple key colors
+
+You can pass your own key colors for secondary, tertiary, neutral, neutralVariant and error instead of letting the library derive them. Only `primary` is required. If you leave out secondary, tertiary or the neutrals they are derived from primary; if you leave out error it falls back to the standard Material red.
+
+```js
+let colors = await materialDynamicColors({
+  primary: "#0000ff",
+  secondary: "#00ff00",
+  tertiary: "#ff00ff",
+  neutral: "#d1d1d6",
+  neutralVariant: "#d1d1d6",
+  error: "#ff0000",
+});
+```
+
+Just like the material theme builder, key colors seed the tonal palettes and each color role picks a tone from them, so the exact hex you pass in won't necessarily appear in the output.
+
 #### Returned object
 ```js
 {
@@ -153,6 +170,11 @@ let colors = await materialDynamicColors(blob);
 Do not forget to put your color source between quotes:
 ```bash
 material-dynamic-colors "#FF0000"
+```
+
+Multiple key colors work here too, as a JSON object:
+```bash
+material-dynamic-colors '{"primary": "#FF0000", "secondary": "#00FF00"}'
 ```
 #### Output
 
