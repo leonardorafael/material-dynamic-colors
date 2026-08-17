@@ -1,5 +1,5 @@
-import { IMaterialDynamicColorsTheme } from "./interfaces";
-import { themeFromSourceColor, themeFromImage, argbFromHex, hexFromArgb, Theme } from "@material/material-color-utilities";
+import { IMaterialDynamicColorsTheme, IMaterialDynamicColorsKeyColors } from "./interfaces";
+import { themeFromSourceColor, themeFromImage, argbFromHex, hexFromArgb, Theme, CorePalette, Scheme } from "@material/material-color-utilities";
 
 function themeToJson(theme: Theme) {
   let json = JSON.parse(JSON.stringify(theme.schemes));
@@ -37,7 +37,39 @@ function themeToJson(theme: Theme) {
   return json;
 }
 
-async function materialDynamicColors (from: string | File | Blob | Event | HTMLImageElement): Promise<IMaterialDynamicColorsTheme> {
+const keyColorNames = ["primary", "secondary", "tertiary", "neutral", "neutralVariant", "error"];
+
+function themeFromKeyColors(keyColors: IMaterialDynamicColorsKeyColors): Theme {
+  let colors: any = {};
+
+  for (let name of keyColorNames) {
+    let value = (keyColors as any)[name];
+    if (value === undefined || value === null) continue;
+    if (typeof value !== "string" || !/^\#([0-9a-f]{3}|[0-9a-f]{6})$/i.test(value)) throw new Error(`invalid ${name} color`);
+    colors[name] = argbFromHex(value);
+  }
+
+  let palette = CorePalette.fromColors(colors);
+
+  return {
+    source: colors.primary,
+    schemes: {
+      light: Scheme.lightFromCorePalette(palette),
+      dark: Scheme.darkFromCorePalette(palette),
+    },
+    palettes: {
+      primary: palette.a1,
+      secondary: palette.a2,
+      tertiary: palette.a3,
+      neutral: palette.n1,
+      neutralVariant: palette.n2,
+      error: palette.error,
+    },
+    customColors: [],
+  };
+}
+
+async function materialDynamicColors (from: string | File | Blob | Event | HTMLImageElement | IMaterialDynamicColorsKeyColors): Promise<IMaterialDynamicColorsTheme> {
   const to:any = from;
   const emptyTheme = <IMaterialDynamicColorsTheme>{
     light:{},
@@ -49,9 +81,14 @@ async function materialDynamicColors (from: string | File | Blob | Event | HTMLI
       let theme = themeFromSourceColor(argbFromHex(to));
       return themeToJson(theme);
     }
-  
+
     if (to.src) {
       let theme = await themeFromImage(to);
+      return themeToJson(theme);
+    }
+
+    if (to && typeof to === "object" && typeof to.primary === "string") {
+      let theme = themeFromKeyColors(to);
       return themeToJson(theme);
     }
 

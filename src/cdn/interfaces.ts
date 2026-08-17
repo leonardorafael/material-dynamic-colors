@@ -37,6 +37,15 @@ export interface IMaterialDynamicColorsThemeColor {
   surfaceContainerHighest: string
 }
 
+export interface IMaterialDynamicColorsKeyColors {
+  primary: string,
+  secondary?: string,
+  tertiary?: string,
+  neutral?: string,
+  neutralVariant?: string,
+  error?: string
+}
+
 export interface IMaterialDynamicColorsTheme {
   light: IMaterialDynamicColorsThemeColor,
   dark: IMaterialDynamicColorsThemeColor

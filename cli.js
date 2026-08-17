@@ -14,12 +14,26 @@ if (!FORMATS.includes(format)) {
 }
 console.log(`\nGenerating ${format} colors from ${source}...`)
 
+if (source && source.trim().startsWith('{')) {
+    try {
+        source = JSON.parse(source)
+    } catch (error) {
+        console.error(`Error: ${error.message}`)
+        process.exit(1)
+    }
+}
+
 const colors =
     await materialDynamicColors(source)
         .catch(error => {
             console.error(`Error: ${error.message}`)
             process.exit(1)
         })
+
+if (typeof source === 'object' && !colors.light.primary) {
+    console.error('Error: invalid key colors')
+    process.exit(1)
+}
 
 if (format === 'CSS') {
     Object.entries(colors).forEach(([themeName, themeColors]) => {
