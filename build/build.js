@@ -1,5 +1,6 @@
 import { build } from "vite";
 import fs from "fs";
+import readme from "./readme.js";
 
 (async () => {
   await build({
@@ -29,4 +30,6 @@ import fs from "fs";
   } catch (error) {
     console.error(error);
   }
+
+  await readme();
 })();
